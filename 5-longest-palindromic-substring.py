@@ -6,7 +6,6 @@ import os
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        s = "b"
         if self.isPalindrome(s):
             sub_string = s
         else:
@@ -22,6 +21,7 @@ class Solution:
         else:
             first = s[0:length // 2]
             last = s[length // 2 + 1::]
+        print("First:" + first +  " Last: " + last)
         if first == last[::-1]:
             return True
         else:
@@ -32,8 +32,9 @@ def main():
 
 
     test = Solution()
-    print("Test 1: "+ test.longestPalindrome("babad"))
-    print("Test 2: "+ test.longestPalindrome("cbbd"))
+    print("Test 1: "+ str(test.isPalindrome("babad")))
+    print("Test 2: "+ str(test.isPalindrome("cbbd")))
+    print("Test 3: "+ str(test.isPalindrome("d")))
 
 
 
